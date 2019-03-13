@@ -1,12 +1,3 @@
-# LISP
-
-## Задачи
-
-### Задача № 6 
-
-Определите функцию, переводящую список чисел в список соответствующих им названий. 
-
-```lsp
 (defun zadacha6 ( x y ) (
 cond  ((null x) (reverse y))
 		 ((= (car x) 1) (zadacha6(cdr x) (cons "odin" y)))
@@ -16,4 +7,6 @@ cond  ((null x) (reverse y))
 			((= (car x) 5) (zadacha6(cdr x) (cons "pyat" y)))
 			((= (car x) 6) (zadacha6(cdr x) (cons "shest" y)))
 ))
-```
+
+
+
