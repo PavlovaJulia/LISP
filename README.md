@@ -7,16 +7,26 @@
 Определите функцию, переводящую список чисел в список соответствующих им названий. 
 
 ```lsp
-(defun zadacha6 ( x y ) (
-cond  ((null x) (reverse y))
-		((= (car x) 1) (zadacha6(cdr x) (cons "odin" y)))
-		((= (car x) 2) (zadacha6(cdr x) (cons "dva" y)))
-		((= (car x) 3) (zadacha6(cdr x) (cons "tri" y)))
-		((= (car x) 4) (zadacha6(cdr x) (cons "chetire" y)))
-		((= (car x) 5) (zadacha6(cdr x) (cons "pyat" y)))
-		((= (car x) 6) (zadacha6(cdr x) (cons "shest" y)))
-))
+(defun check(x z)
+	(cond ((null z) "no match")
+		((eq x (caar z)) (cadar z))
+		(t (check x (cdr z)))	
+	)
+)
+
+(defun number-name (x) 
+(set `z `((1 one) (2 two) (3 three) (4 four) (5 five) (6 six) (7 seven) (8 eight) (9 nine) (10 ten)))
+	(cond ((null x) nil)
+		 (t (cons(check (car x) z)(number-name (cdr x))))		 
+	)
+)
+
+;(print(number-name `(1 3 5 7 10)))
+;(print(number-name `(10 4 1 6 3 3 10)))
+;(print(number-name `(23 4 5 16 7)))
 ```
+Результат работы:
+![](https://github.com/PavlovaJulia/LISP/blob/master/png/task6.png)
 
 #### Задача № 15 
 
