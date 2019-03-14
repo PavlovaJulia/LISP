@@ -26,7 +26,7 @@
 ;(print(number-name `(23 4 5 16 7)))
 ```
 Результат работы:
-![](https://github.com/PavlovaJulia/LISP/blob/master/png/task6.png)
+![](https://github.com/PavlovaJulia/LISP/blob/master/png/task6.PNG)
 
 #### Задача № 15 
 
