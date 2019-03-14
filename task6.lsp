@@ -1,6 +1,6 @@
 ;Определите функцию, переводящую список чисел в список соответствующихим названий.
 
-(defun check(x z)
+(defun check (x z)
 	(cond ((null z) "no match")
 		((eq x (caar z)) (cadar z))
 		(t (check x (cdr z)))	

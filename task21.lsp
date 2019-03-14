@@ -12,5 +12,8 @@
 				)   
 	 )(car x) (cdr x)
 	)
-	
 )
+
+;(print(remove-el `(3 e r (4 5) r 8) `r))
+;(print(remove-el `(3 e r (4 5) r 8) `4))
+;(print(remove-el `(3 (e 8) r (4 5) r 8) `8))

@@ -1,6 +1,6 @@
 ;Определите предикат, проверяющий, является ли аргумент одноуровневым списком.
 
-(defun single-level-lst(x)
+(defun single-level-lst (x)
 	(cond ((null x) t)
 		  ((atom (car x)) (single-level-lst (cdr x)))
 		  (t nil)
