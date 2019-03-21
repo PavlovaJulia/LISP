@@ -9,13 +9,13 @@
 ```lsp
 (defun check (x z)
 	(cond ((null z) "no match")
-		((eq x (caar z)) (cadar z))
-		(t (check x (cdr z)))	
+		  ((eq x (caar z)) (cadar z))
+		  (t (check x (cdr z)))	
 	)
 )
 
 (defun number-name (x) 
-(set `z `((1 one) (2 two) (3 three) (4 four) (5 five) (6 six) (7 seven) (8 eight) (9 nine) (10 ten)))
+	(set `z `((1 one) (2 two) (3 three) (4 four) (5 five) (6 six) (7 seven) (8 eight) (9 nine) (10 ten)))
 	(cond ((null x) nil)
 		 (t (cons(check (car x) z)(number-name (cdr x))))		 
 	)
@@ -118,11 +118,9 @@
 
 (defun del-property (x)
 	((lambda(prop-list)
-			 (cond ((null prop-list) nil)
-					(t (remprop x (car prop-list)))
-		   
-	
-			 )
+			(cond ((null prop-list) nil)
+				  (t (remprop x (car prop-list)))
+			)
 	)(symbol-plist x))	 
 	(cond((not(null (symbol-plist x))) (del-property x))
 	) 
@@ -141,7 +139,7 @@
 ;значения родителей, и предикат (СЕСТРЫ-БРАТЬЯ x1 x2), который истинен в случае, если x1 и x2 — сестры или братья, родные или с одним общим родителем.
 
 (defun parents (x)
-(list (get x `parent1) (get x `parent2))
+	(list (get x `parent1) (get x `parent2))
 )
 
 (defun sister-brother (x1 x2)
