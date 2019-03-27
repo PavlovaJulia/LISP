@@ -7,6 +7,6 @@
 	)
 )
 
-;(print(scalar-product `(6) `(5)))
-;(print(scalar-product `(3 2) `(3 2)))
-;(print(scalar-product `(2 3 2) `(1 1 0)))
+;(scalar-product `(6) `(5)) ;30
+;(scalar-product `(3 2) `(3 2)) ;13
+;(scalar-product `(2 3 2) `(1 1 0)) ;5
