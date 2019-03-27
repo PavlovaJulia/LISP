@@ -4,7 +4,7 @@
 	(cond
 		((null lst) nil)
 		((eq el (car lst))t)
-		(t (check el (cdr lst)))	
+		(t (is-member el (cdr lst)))	
 	)
 )
 

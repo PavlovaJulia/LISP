@@ -10,6 +10,6 @@
 	)(car lst) (cdr lst))			
 )
 
-;(print(remove-el `(3 e r (4 5) r 8) `r)) ;(3 E (4 5) R 8)
-;(print(remove-el `(3 e r (4 5) r 8) `4)) ;(3 E R (4 5) R 8)
-;(print(remove-el `(3 (e 8) r (4 5) r 8) `8)) ;(3 (E 8) R (4 5) R)
+;(remove-el `(3 e r (4 5) r 8) `r) ;(3 E (4 5) R 8)
+;(remove-el `(3 e r (4 5) r 8) `4) ;(3 E R (4 5) R 8)
+;(remove-el `(3 (e 8) r (4 5) r 8) `8) ;(3 (E 8) R (4 5) R)
