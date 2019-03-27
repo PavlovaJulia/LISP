@@ -2,13 +2,15 @@
 
 (defun del-property (x)
 	((lambda(prop-list)
-			 (cond ((null prop-list) nil)
-					(t (remprop x (car prop-list)))	
-			 )
+		(cond
+			((null prop-list) t)
+			(t (remprop x (car prop-list))(del-property x)) 	
+		)
 	)(symbol-plist x))	 
-	(cond((not(null (symbol-plist x))) (del-property x))
-	) 
-)
+) 
 
-;(setf(get `x `a)10)
+
+;(setf(get `x `a)10) 
 ;(setf(get `x `b)15)
+
+;(del-property `x) ;T

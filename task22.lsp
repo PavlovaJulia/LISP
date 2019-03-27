@@ -1,7 +1,13 @@
 ;Определите функцию, которая обращает список (а b с) и разбивает его на уровни (((с) b) а).
 
-(defun reverse-abc (x)
-	(list(list (cddr x) (cadr x)) (car x))
+(defun reverse-abc (lst)
+	((lambda(first rest)
+		(cond
+			((null rest)(list first))
+			(t (list (reverse-abc rest) first))
+		)
+	)(car lst)(cdr lst))	
 )
 
-;(print(reverse-abc `(a b c)))
+;(reverse-abc `(a b c)) ;(((C) B) A)
+;(reverse-abc `(a b c r t y)) ;((((((Y) T) R) C) B) A)
