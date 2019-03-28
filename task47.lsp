@@ -1,6 +1,6 @@
 ;Определите функцию удалить-все-свойства, которая удаляет все свойства символа.
 
-(defun del-property (x)
+(defun del-propertyes (x)
 	((lambda(prop-list)
 		(cond
 			((null prop-list) t)
