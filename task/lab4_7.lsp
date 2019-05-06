@@ -7,6 +7,5 @@
 )
 
 ;Тесты
-;(main) ;(ELEM1 ELEM2 ELEM6)
 ;(rem-if-not #'(lambda (el) (eq el 1)) '(1 2 3 1 4 5 1 6 7 1)) ;(1 1 1 1)
 ;(rem-if-not 'atom '(a b (c) (d) e)) ;(A B E)
