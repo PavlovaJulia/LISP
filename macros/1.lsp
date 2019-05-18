@@ -1,6 +1,6 @@
 ; 1. Определите макрос, который возвращает свой вызов
 
-(defmacro self (&rest x)
+  self (&rest x)
 	`(quote (self ,@x))
 )
 
